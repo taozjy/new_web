@@ -1,0 +1,47 @@
+{extend name='mb'}
+{block name='bodys'}
+				
+		<div class="layui-container">
+			
+			<div class="layui-row">
+				<div class="layui-col-md12">&nbsp;</div>
+				<div class="layui-col-md10 layui-col-md-offset1">
+					说明：作品做多只能显示最近的六个。可以使用搜索名称跟上传日期查找。
+				</div>
+				<div class="layui-col-md12">&nbsp;</div>
+				<div class="layui-col-md10 layui-col-md-offset1" >
+					<form action="./index.php?s=index/Nr/cp"  method="post">
+						名称：<input type="text" name="wb" />
+						时间：<input type="date"  name="sj" />
+						<input class="layui-btn" type="submit" value="提交" />
+					</form>
+				</div>
+				<div class="layui-col-md12">&nbsp;</div>
+				<div class="layui-col-md12 layui-col-space20">
+					{if condition="$nr_cp eq null"}
+						未查询到该作品
+					{else /}
+					{volist name='nr_cp' id='cp_xh' }
+						
+							<div class="layui-col-md4 layui-col-xs12" >
+								<div class="layui-col-md12 layui-col-xs12" style="border: 1px solid #D2D2D2;">
+										<a href="index.php?s=index/nr/index&id={$cp_xh.id}">
+										<div class="layui-col-md12 layui-col-xs12">
+											<img class="layui-col-md12 layui-col-xs12" height="300px" src="{$cp_xh.photo_url}">
+										</div>
+										<div class="layui-col-md12 layui-col-xs12 jz zt20">
+											{$cp_xh.product_name}
+										</div>
+										<div class="layui-col-md12 layui-col-xs12 jz zt20">
+											{$cp_xh.time}
+										</div>
+										</a>
+								</div>
+							</div>
+						
+					{/volist}	
+					{/if}
+				</div>
+			</div>
+		</div>
+{/block}		

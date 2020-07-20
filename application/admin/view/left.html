@@ -1,0 +1,70 @@
+
+		<ul style="border-right:1px solid #000; " class="layui-col-md2 sz_g" >
+			<li  style="
+			width: 100%; 
+			height:4rem; 
+			line-height:4rem; 
+			text-align: center; 
+			{if $Request.controller eq 'Banner' } 
+			background-color:#f3f3f3{/if}">
+				<a href="admin.php?s=admin/banner/select_banner">banner图上传</a>
+			</li>
+			<li style="width: 100%; height:4rem; line-height:4rem; text-align: center; 
+			{if $Request.controller eq 'Textwb' } 
+			background-color:#f3f3f3{/if}">
+				<a href="admin.php?s=admin/textwb/text_index">文章列表</a>
+			</li>
+			
+			<li style="width: 100%; height:4rem; line-height:4rem; text-align: center;
+			{if $Request.controller eq 'Product' } 
+			background-color:#f3f3f3{/if}">
+				<a href="admin.php?s=admin/product/product_index">作品列表</a>
+			</li>
+			<!-- <li style="width: 100%; height:4rem; line-height:4rem; text-align: center;">
+				标题设置
+			</li> -->
+			
+			
+			<li style="width: 100%; height:4rem; line-height:4rem; text-align: center;
+			{if $Request.controller eq 'Ly' }
+			background-color:#f3f3f3{/if}">
+				<a href="admin.php?s=admin/ly/index">
+					留言查看
+				</a>
+			</li>
+			
+			<li style="width: 100%; height:4rem; line-height:4rem; text-align: center;
+			{if $Request.controller eq 'Latest' } 
+			background-color:#f3f3f3{/if}">
+				<a href="admin.php?s=admin/latest/latest_index">
+					公司最新动态
+				</a>
+			</li>
+			
+			
+			<li style="width: 100%; height:4rem; line-height:4rem; text-align: center;
+			{if $Request.controller eq 'Abouts' } 
+			background-color:#f3f3f3{/if}">
+				<a href="admin.php?s=admin/abouts/abouts_index">
+				底部
+				关于我们
+				设置
+				</a>
+			</li>
+			
+			
+		</ul>
+		
+		<script>
+			
+			var a = document.getElementsByClassName('sz_g')[0];
+			var b = document.documentElement.clientHeight
+			
+			var text = (b-50)+"px";
+
+			
+			a.style.height = text;
+			
+				
+			
+		</script>

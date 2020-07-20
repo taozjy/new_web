@@ -1,0 +1,101 @@
+		{extend name='mb'}
+		{block name='bodys'}
+		<div class="layui-container">
+						<div class="layui-row">
+								<div  class="layui-col-md12">
+									<div class="layui-col-md10 pd15">
+										<form method="post" action="index.php?s=index/Ss/index">
+											<div>
+												<div>请输入您要搜索的文章或者作品题目</div>
+												<div><input type="text" name="names" ></div>
+												
+												<div>请输入您要搜索的文章或者作品题目</div>
+												<div><input type="date" name="sj" ></div>
+												<div style="margin-top:10px;">
+													<input class="layui-btn" type="submit" value="提交">
+												</div>
+											</div>
+										</form>
+									</div>	
+										
+										
+										{if condition="!empty($names)||!empty($cp)"}
+										<div class="layui-col-md11 layui-col-md-offset1">
+											<div class="layui-tab">
+											  <ul class="layui-tab-title">
+												<li class="layui-this">文章搜索显示内容</li>
+												<li>产品搜索显示内容</li>
+											  </ul>
+											  <div class="layui-tab-content">
+												<div class="layui-tab-item layui-show">
+													<div class="layui-col-md12">
+													
+														<div class="layui-col-md6">名称</div>
+														<div class="layui-col-md6">时间</div>
+												
+													</div>
+													<div class="layui-col-md12 ">&nbsp;</div>
+													
+													{volist name='names' id='nrs'}
+														<div class="layui-col-md12">
+															<a href="./index.php?s=index/index/index_wenzhang&id={$nrs.id}" >
+																<div class="layui-col-md6">{$nrs.index_text_name}</div>
+																<div class="layui-col-md6">{$nrs.index_text_time}</div>
+															</a>	
+														</div>
+														<div class="layui-col-md12 ">&nbsp;</div>
+													{/volist}
+						
+												</div>
+												
+												
+												<div class="layui-tab-item">
+													
+													<div class="layui-col-md12 ">
+														
+														<div class="layui-col-md4">名称</div>
+														<div class="layui-col-md4">产品图片</div>
+														<div class="layui-col-md4">时间</div>
+											
+													</div>
+													<div class="layui-col-md12 ">&nbsp;</div>
+													
+													{volist name='cp' id='cps'}
+														<div class="layui-col-md12 ">
+															<a href="./index.php?s=index/index/index_chanpin&id={$cps.id}" >
+																<div class="layui-col-md4">{$cps.product_name}</div>
+																<div class="layui-col-md4"><img style="width: 100px; height: 100px;" src='{$cps.photo_url}'/></div>
+																<div class="layui-col-md4">{$cps.time}</div>
+															</a>
+														</div>
+														<div class="layui-col-md12 ">&nbsp;</div>
+													{/volist}
+													
+													
+												</div>
+											  </div>
+											</div>
+											 
+											<script>
+											//注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+											layui.use('element', function(){
+											  var element = layui.element;
+											  
+											  //…
+											});
+											</script>
+												  
+										</div>
+										{else/}
+										<div class="layui-col-md9 layui-col-md-offset1">{$wenben}</div>
+										{/if}
+										
+										
+										
+										
+								</div>
+						</div>
+		
+		</div>
+		{/block}
+		

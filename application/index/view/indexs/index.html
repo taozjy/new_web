@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="text/css/layui.css">
+		<link rel="stylesheet" href="text/qt.css">
+		<script src="text/layui.js"></script>
+		<script src="text/jquery.js"></script>
+		
+	</head>
+	<body>
+		{include file='application/index/view/head.html'}
+		<div class="layui-container">
+			<div class="layui-carousel"  id="lb">
+				<div carousel-item>
+					{volist name='banner_text' id='banners' }
+					
+					<div ><a href="{$banners.hrefs}"><img  width="100%" height="100%" src="{$banners.url}"/><!-- style="  background:url({$banners.url}) no-repeat content-box 100%; " --></a></div>
+					
+					{/volist}
+					
+				</div>
+			</div>
+		
+		<div style="width: 100%; height:50px;" ></div>
+		
+		
+			<div class="layui-row ">
+					<div class="layui-col-md12 hg1000">
+						<div class="layui-col-md12 jz_sx">
+							<h2 class="layui-col-md1">公司动态</h2>
+							<div class="layui-col-md11 hg1"></div>
+						</div>
+						<div class="layui-col-md12">&nbsp;</div>
+						{volist name='latest_texts' id='latest_texts' }
+						<div class="layui-col-md5 jz hg28"><img width="100%" height="100%" src="{$latest_texts.latest_img_url}"></div>
+						<div class="layui-col-md6 layui-col-md-offset1 index_wz hg28">{$latest_texts.latest_text}</div>
+						{/volist}
+					</div>
+					
+					<div class="layui-col-md12" style="height:50px;"></div>
+					<div class="layui-col-md12">
+						<div class="layui-col-md12 jz_sx">
+							<h2 class="layui-col-md1">文章动态</h2>
+							<div class="layui-col-md11 hg1"></div>
+						</div>
+						<div class="layui-col-md12">&nbsp;</div>
+						<ul class="layui-col-md12 ">
+									{volist name='text_text' id='texts' offset='0' length='5' }
+											<li  class="layui-col-md12">
+												<a class="layui-col-md12 hz" href="index.php?s=index/index/index_wenzhang&id={$texts.id}" >
+													<div class="layui-col-md8 " ><h3>{$texts.index_text_name}</h3></div>
+													<div class="layui-col-md4 j_right" >{$texts.index_text_time}</div>
+												</a>
+											</li>
+											
+											<li class="layui-col-md12">&nbsp;</li>
+									{/volist}
+						</ul>
+				</div>
+				<div class="layui-col-md12" style="height:50px;"></div>
+				<div class="layui-col-md12">
+					<div class="layui-col-md12 jz_sx">
+						<h2 class="layui-col-md2">个人制作展示</h2>
+						<div class="layui-col-md10 hg1"></div>
+					</div>
+					<div class="layui-col-md12" style="height:20px;"></div>
+					<div class="layui-row layui-col-space10">
+						{volist name='product_text' id='product_text' }	
+							<div class="layui-col-md4 ">
+								<a style="cursor:pointer; text-decoration:none; " href="index.php?s=index/index/index_chanpin&id={$product_text.id}" >
+									<div style="height: 300px;class="layui-col-md12">
+										{if condition="$product_text.photo_url eq null"}
+											暂无产品图片
+										{else /}
+											<img width="100%" height="100%" src="{$product_text.photo_url}" >
+										{/if}
+									</div>
+									<div  class="layui-col-md12">产品名字:{$product_text.product_name}</div>
+									<div style="height: 100px;" class="layui-col-md12">{$product_text.product_text}</div>
+								</a>
+							</div>
+						{/volist}
+					</div>
+				</div>
+				
+				
+				<div class="layui-col-md12" style="height:50px;"></div>
+			
+				<div class="layui-col-md12">
+						<div class="layui-col-md12 jz_sx">
+							<h2 class="layui-col-md1">网站留言</h2>
+							<div class="layui-col-md11 hg1"></div>
+						</div>
+						<div class="layui-col-md12">
+								<div class="layui-col-md12" style="height:50px;"></div>
+								<div class="layui-col-md4 layui-col-md-offset4 hz hg4">
+									<div style="font-size: 1.5rem;" class="layui-col-md2 zt">姓名</div>
+									<input class="layui-input-inline ip_a" type="text">
+								</div>
+								
+								<div class="layui-col-md12" style="height:10px;"></div>
+
+								<div class="layui-col-md4 layui-col-md-offset4 hz hg4">
+									<div style="font-size: 1.5rem;" class="layui-col-md2 zt">电话</div>
+									<input class="layui-input-inline ip_b" type="text">
+								</div>
+								
+								<div class="layui-col-md12" style="height:10px;"></div>
+								
+								<div class="layui-col-md8 layui-col-md-offset4 hz hg4 ">
+									<div style="font-size: 1.5rem;" class="layui-col-md2 zt">留言内容</div>
+									<input class="layui-input-inline ip_c" type="text">
+								</div>
+								
+								<div class="layui-col-md12" style="height:10px;"></div>
+								
+								<div class="layui-col-md8 layui-col-md-offset4 layui-col-md-offset1 hg4">
+									<input onclick="cs()" class="layui-input-inline layui-btn " type="submit">
+								</div>
+						</div>
+				</div>
+				
+				<div class="layui-col-md12" style="height:50px;"></div>
+				
+				
+			</div>
+		</div>
+		
+		
+		<script>
+		layui.use('carousel', function(){
+		  var carousel = layui.carousel;
+		  //建造实例
+		  carousel.render({
+			elem: '#lb',
+			width: '100%' ,//设置容器宽度
+			height:'400px',
+			arrow: 'always' //始终显示箭头
+			//,anim: 'updown' //切换动画方式
+		  });
+		});
+		</script>
+		
+		
+		
+		
+		{include file='application/index/view/foot.html'}
+	
+				<script type="text/javascript">
+					$.ajax({
+									type:"get",
+									// headers:{'Content-Type':'application/json;charset=utf8'},
+									url:"index.php?s=index/index/bottom",
+									success:function(text){
+										console.log(text);
+										let texts = JSON.parse(text);
+					 					$("#qq").html("QQ:"+texts[0].qq_text);
+					 					$("#codes").attr("src",texts[0].qr_code_url);
+					 					$("#numbers").html("网站备案编号:"+texts[0].number);
+					 					$("#address").html("地址:"+texts[0].address);
+									}
+					})
+					
+					
+					function cs(){
+						
+						var name = $('.ip_a').val();
+						var phone = $('.ip_b').val();
+						var text = $('.ip_c').val();
+						var cs;
+						
+						
+						if(name==''&&phone==''&&text==''){
+								cs =1;
+						}else{
+							cs = 10;
+						}
+						
+								switch(cs){
+									case 1:
+										layer.msg('所有内容不能为空');
+									break;
+									case 10:
+											$.ajax({
+													type:'get',
+													url:"index.php?s=index/Nr/about_user",
+													dataType:'json',
+													data:{
+														name:name,
+														phone:phone,
+														text:text,
+													},
+													success:function(text){
+															console.log(text);
+															if(text.type=='200'){
+																layer.msg(text.text);
+															}else{
+																layer.msg(text.text);
+															}
+													}
+											})
+										break;
+								}
+					}
+					
+				</script>
+				
+				
+				
+	</body>
+</html>

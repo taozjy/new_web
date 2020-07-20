@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="text/css/layui.css">
+		<link rel="stylesheet" href="text/zd.css">
+		<script src="text/layui.js"></script>
+		<script src="text/jquery.js"></script>
+	</head>
+	<body>
+		
+		{include file='admin/admin/view/head.html'}
+		<!-- <div class="layui-container"> -->
+			<div class="layui-row">
+					<div class="layui-col-md12">
+							{include file='admin/admin/view/left.html'}
+							
+							<div class="layui-col-md10 pd15">
+								<a class="layui-col-md1 layui-btn" href="admin.php?s=admin/product/Product_add">新增</a>
+								<div class="layui-col-md12">&nbsp</div>
+								<ul class="layui-col-md12">
+								<li class="layui-col-md1 biaoti">排序</li>
+								<li class="layui-col-md4 biaoti">作品名称</li>
+								<li class="layui-col-md2 biaoti">产品时间</li>
+								<li class="layui-col-md2 biaoti">操作</li>
+								</ul>
+								<div class="layui-col-md12">&nbsp</div>
+								{volist name="product_sel" id="product_sel"}
+									<ul class="layui-col-md12 jz1">
+										<li class="layui-col-md1">{$product_sel.id}</li>
+										<li class="layui-col-md4">{$product_sel.product_name}</li>
+										<li class="layui-col-md2">{$product_sel.time}</li>
+										<li class="layui-col-md2">
+											<a class="layui-btn" href="admin.php?s=admin/product/product_update&id={$product_sel.id}">修改</a>
+											&nbsp;
+											<a class="layui-btn" href="admin.php?s=admin/product/product_detele&id={$product_sel.id}">删除</a>
+										</li>
+									</ul>
+									<div class="layui-col-md12">&nbsp</div>
+								{/volist}
+							</div>
+					</div>
+			</div>
+	</body>
+</html>

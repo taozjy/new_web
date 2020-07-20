@@ -1,0 +1,45 @@
+{extend name='mb'}
+{block name='bodys'}
+		<div class="layui-container" >
+			<div class="layui-row">
+					{volist name='xinxi' id='cp' }
+					<div class="layui-col-md8" style="border-right: 1px solid #D2D2D2;" >
+						<h1>产品名称:{$cp.product_name}</h1>
+						<div class="layui-col-md12">&nbsp;</div>
+						<div class="layui-col-md6"><h3>产品发布时间:{$cp.time}</h3></div>
+						<div class="layui-col-md12">&nbsp;</div>
+					
+						{if condition="$cp.photo_url eq null"}
+						<div style="width: 300px; height: 300px; display:flex; justify-content:center; align-items:center;">暂无图片</div>
+						{else/}
+						<div class="layui-col-md12 jz"><img style="width:600px; height:500px;" src="{$cp.photo_url}" /></div>
+						{/if}
+					
+						<div class="layui-col-md12">&nbsp;</div>
+						
+					
+						<div style="font-size:24px;" class="layui-col-md12">产品说明:{$cp.product_text}</div>
+					</div>
+					{/volist}
+					<div class="layui-col-md4 layui-col-xs12 zy20">
+						<div class="layui-col-md12 layui-col-xs12"><h1>其他产品</h1></div>
+						<div class="layui-col-md12 layui-col-xs12 jz ">
+							{volist name='chanpin' length='4' id='qtcp'}
+							
+								<div class="layui-col-md12 layui-col-xs12 ">&nbsp;</div>
+									<a class="layui-col-xs12" href="index.php?s=index/nr/index&id={$qtcp.id}">
+										<div class="layui-col-md12 layui-col-xs12 jz_s">
+											<img width="300px" height="180px" src="{$qtcp.photo_url}">
+											<div><h2>{$qtcp.product_name}</h2></div>
+										</div>
+									</a>	
+								<div class="layui-col-md12 layui-col-xs12">&nbsp;</div>
+							
+							{/volist}
+						</div>
+					</div>
+			</div>
+		</div>
+		
+		{/block}
+

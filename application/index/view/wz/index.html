@@ -1,0 +1,41 @@
+{extend name='mb'}
+{block name='bodys'}		
+		<div class="layui-container">
+			<div class="layui-row">
+				
+				<div class="layui-col-md12">&nbsp;</div>
+				<div class="layui-col-md10 layui-col-md-offset1">
+					说明：作品做多只能显示最近的十二个。可以使用搜索名称跟上传日期查找。
+				</div>
+				<div class="layui-col-md12">&nbsp;</div>
+				<div class="layui-col-md10 layui-col-md-offset1" >
+					<form action="./index.php?s=index/wz/index"  method="post">
+						名称：<input type="text" name="wb" />
+						时间：<input type="date"  name="sj" />
+						<input class="layui-btn" type="submit" value="提交" />
+					</form>
+				</div>
+				<div class="layui-col-md12">&nbsp;</div>
+				
+				
+					<div class="layui-col-md12 hz" >
+						{volist name='wenb' id='wz' }
+						<a class="wzlist"  href="index.php?s=index/wz/index_wenzhang&id={$wz.id}">
+								<div class="layui-col-md8 fl_h" >
+									<span class="layui-badge-dot layui-bg-cyan wzlist" style="width:10px;height: 10px;"></span>
+									<h1>&nbsp;{$wz.index_text_name}</h1>
+								</div>
+								<div class="layui-col-md4 j_right " >
+									<h3>发布时间:{$wz.index_text_time}</h3>
+								</div>
+						</a>
+						<div class="layui-col-md12">&nbsp;</div>
+						{/volist}
+					</div>
+			</div>
+		</div>
+		
+		
+	
+		
+{/block}

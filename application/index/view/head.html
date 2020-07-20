@@ -1,0 +1,15 @@
+
+<div class="layui-container ">  
+		<div class="layui-row ">
+			<div class="layui-col-md12 layui-col-xs12 jz_logo"><div>logo</div></div>
+			<!-- <div class="layui-col-md3 layui-col-sm3"><a href="#">登录</a></div>
+			<div class="layui-col-md3 layui-col-sm3"><a href="#">注册</a></div> -->
+		</div>
+		<div class="layui-row"> <hr/></div>
+		<ul class="layui-row">
+			{volist name='head' id='header' key='k'}
+			<li class="layui-col-md1 layui-col-xs4 head_li {if $Request.controller eq $header.controller } layui-bg-gray {/if}"><a href="{$header.hrefs}" >{$header.name}</a></li>
+			{/volist}
+		</ul>
+		<div class="layui-row"> <hr/></div>
+</div>

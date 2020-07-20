@@ -1,0 +1,155 @@
+		{extend name='mb'}
+		{block name='bodys'}
+		<div class="layui-container">
+			<div class="layui-row bje">
+				<div class="layui-carousel"  id="lb">
+					<div carousel-item>
+						{volist name='banner_text' id='banners' }
+						<div ><a href="{$banners.hrefs}"><img  width="100%" height="100%" src="{$banners.url}"/><!-- style="  background:url({$banners.url}) no-repeat content-box 100%; " --></a></div>
+						{/volist}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="layui-container">
+		
+			<div class="layui-row ">
+					<div class="layui-col-md12 layui-col-xs hg1000">
+						<div class="layui-col-md12 layui-col-xs jz sx20">
+							<h2 class="layui-col-md3 layui-col-xs zt jz">公司动态</h2>
+						</div>
+						<div class="layui-col-md12">&nbsp;</div>
+						{volist name='latest_texts' id='latest_texts' }
+						<div style="margin-bottom:20px;" class="layui-col-md6 index_wz zt20 slh">{$latest_texts.latest_text}</div>
+					
+						<div class="layui-col-md5 layui-col-md-offset1  jz hg30"><img width="100%" height="100%" src="{$latest_texts.latest_img_url}"></div>
+						{/volist}
+						
+						<div class="layui-col-md12" style="height:50px;"></div>
+						
+						<div class="layui-col-md12 jz sx20">
+							<h2 class="layui-col-md2 zt20"><a class="jz layui-btn zt20" href="./index.php?s=index/index/wz_q" >查看详情</a></h2>
+						</div>
+					</div>
+					
+					<div class="layui-col-md12 layui-col-xs12" style="height:50px;"></div>
+					
+					
+				<div class="layui-col-md12 layui-col-xs12">
+						<div class="layui-col-md12 jz">
+							<h2 class="layui-col-md3 zt jz">文章动态</h2>
+						</div>
+						<div class="layui-col-md12">&nbsp;</div>
+						<ul class="layui-col-md12 ">
+									{volist name='text_text' id='texts' offset='0' length='7' key='k' }
+								
+										{if condition='$k%2==1'}
+											<li  class="layui-col-md12  bjd2 wbpd">
+												<a class="layui-col-md12 hz zt20 pdsx " href="index.php?s=index/index/index_wenzhang&id={$texts.id}" >
+													<div class="layui-col-md8  " ><h3>{$texts.index_text_name}</h3></div>
+													<div class="layui-col-md4 j_right  " >{$texts.index_text_time}</div>
+												</a>
+											</li>
+											{else /}
+											<li  class="layui-col-md12 bje wbpd">
+												<a class="layui-col-md12 hz zt20 pdsx " href="index.php?s=index/index/index_wenzhang&id={$texts.id}" >
+													<div class="layui-col-md8" ><h3>{$texts.index_text_name}</h3></div>
+													<div class="layui-col-md4 j_right" >{$texts.index_text_time}</div>
+												</a>
+											</li>
+											{/if}
+											<li class="layui-col-md12">&nbsp;</li>
+									{/volist}
+						</ul>
+						
+						<div class="layui-col-md12 jz"><a class="layui-btn zt20" href="./index.php?s=index/index/wz_q">查看更多</a></div>
+						
+				</div>
+				
+				
+				<div class="layui-col-md12 layui-col-xs12" style="height:50px;"></div>
+				<div class="layui-col-md12 layui-col-xs12">
+					<div class="layui-col-md12 jz">
+						<h2 class="layui-col-md3 jz zt">产品展示</h2>
+						
+					</div>
+					
+					<div class="layui-col-md12" style="height:20px;"></div>
+					<div class="layui-row layui-col-space30">
+						{volist name='product_text' id='product_text' }	
+							<div class="layui-col-md4 zt20 ">
+								<div class="layui-col-md12 cp_xg">
+									<a style="cursor:pointer; text-decoration:none; " href="index.php?s=index/index/index_chanpin&id={$product_text.id}" >
+										<div style="height: 300px;class="layui-col-md12">
+											{if condition="$product_text.photo_url eq null"}
+												暂无产品图片
+											{else /}
+												<img width="100%" height="100%" src="{$product_text.photo_url}" >
+											{/if}
+										</div>
+										
+										<div class="layui-col-md12 jz pdsx">{$product_text.product_name}</div>
+										<div class="layui-col-md12 jz pdsx">{$product_text.time}</div>
+										<div style="height: 100px;" class="layui-col-md12 wbpd">{$product_text.product_text}</div>
+									</a>
+								</div>
+							</div>
+						{/volist}
+					</div>
+					
+					
+					<div class="layui-col-md12" style="height:50px;"></div>
+					<div class="layui-col-md12 jz"><a class="layui-btn zt20" href="./index.php?s=index/Nr/cp">查看更多</a></div>
+				</div>
+				
+				
+				<div class="layui-col-md12 layui-col-xs12" style="height:50px;"></div>
+			
+				<div class="layui-col-md12 layui-col-xs12">
+						<div class="layui-col-md12 jz">
+							<h2 class="layui-col-md3 jz zt">网站留言</h2>
+						</div>
+						
+						<div style="margin-top:10px;" class="layui-col-md12 jz">
+							如果文章跟产品哪里有错误请留言指证，我们会尽快下架！
+						</div>
+						<div class="layui-col-md12">
+								<div class="layui-col-md12" style="height:50px;"></div>
+								<div class="layui-col-md6 layui-col-md-offset3 hz ">
+						
+									<input class="wzly ip_a" placeholder='请输入您的名称' type="text">
+								</div>
+								
+								<div class="layui-col-md12" style="height:10px;"></div>
+
+								<div class="layui-col-md6 layui-col-md-offset3 hz ">
+									<input class="wzly ip_b" placeholder='请输入您的联系方式(手机号)' type="text">
+								</div>
+								
+								<div class="layui-col-md12" style="height:10px;"></div>
+								
+								<div class="layui-col-md6 layui-col-md-offset3 hz ">
+					
+									<textarea style="height:200px; color:black;" class="wzly ip_c" >
+										
+									</textarea>
+								</div>
+								
+								<div class="layui-col-md12" style="height:10px;"></div>
+								
+								<div class="layui-col-md6 layui-col-md-offset3 layui-col-md-offset1 hg4">
+									<input onclick="cs()" class="layui-input-inline layui-btn " type="submit">
+								</div>
+						</div>
+				</div>
+				
+				<div class="layui-col-md12" style="height:50px;"></div>
+				
+				
+			</div>
+		</div>
+		
+			{/block}
+		
+				
+	

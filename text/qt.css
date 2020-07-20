@@ -1,0 +1,305 @@
+		.hz{
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+			}
+			.jz_logo{
+				height:100px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.index_wz{
+				overflow: hidden;
+			}
+		.head_li{
+			display: flex;
+			height:40px;
+			justify-content: center;
+			align-items: center;
+		}
+.jz{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			}
+		
+		.jz_sx{
+			display: flex;
+			align-items: center;
+		}
+.jz_s{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction:column;
+	align-items: center;
+	justify-content: center;
+}		
+		.hg1000{
+			height: 100%;
+		}
+		.hg28{
+			height:280px;
+		}
+		.hg30{
+			height:300px;
+		}
+		.hg35{
+			height:350px;
+		}
+		.hg1{
+			height:1px;
+			background-color: #000;
+		}
+		.hg4{
+			height: 40px;
+		}
+		.j_right{
+			display: flex;
+			flex-direction: row-reverse;
+			align-items: center;
+		}
+		
+		.neirong{
+			min-height: 600px;
+		}
+		
+		.bg{
+			
+			border: 1px solid #EFEFEF;
+		}
+		.zt{
+			font-size:48px;
+		}
+		.zt20{
+			font-size: 20px;
+		}
+		.slh{
+			display: -webkit-box;
+			
+			-webkit-box-orient: vertical;
+			
+			-webkit-line-clamp:10;
+			
+			overflow: hidden;
+		}
+		
+		
+		
+		/* 20200629 */
+		*{
+			font-family: "microsoft yahei";
+			box-sizing: border-box;
+		}
+		.jz1{
+			text-align: center;
+			align-items: center;
+		}
+		.header1{
+			height: 80px;
+			
+		}
+		.header1_tit{
+			height: 80px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.body1{
+			height:120px;
+			border: 1px solid #000000;
+		}
+		.body1_text{
+			height:42px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.body1_text2{
+			display: flex;
+			align-items: center;
+			height:36px;
+		}
+		
+		.body2{
+			width:30px;
+			height:30px;
+			
+		}
+		
+		.body3{
+			width:30px;
+			height:30px;
+			
+		}
+		.wenzi{
+			line-height: 30px;
+		}
+		.wenzi_tp{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		
+		.body3_tp{
+			width: 100%;
+			height: 180px;
+			border: 1px solid #000000;
+		}
+		.body3_text{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.body4_nr{
+			padding:10px;
+		}
+		.body4_text{
+			padding: 5px;
+		}
+		
+		.body4_texts{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 5px;
+			background-color:#f8f8f8;
+			color: w;
+		}
+		.body5_gf{
+			width: 60px;
+			height: 60px;
+			border: 1px solid #000;
+		}
+		.body5_gfs{
+			height: 60px;
+		}
+		.body5_tf{
+			width: 60px;
+			height: 60px;
+			border: 1px solid #000;
+		}
+		.body5_tfs{
+			height: 60px;
+		}
+		.body5_left{
+			border: 1px solid #000000;
+			height: 120px;
+		}
+		.body5_right{
+			padding: 10px;
+		}
+		
+		.sx10{
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		
+		.body6_right_text{
+				height: 30px;
+				border-radius:6px;
+		}
+		.bottomg{
+			margin-bottom:20px;
+		}
+		.topg{
+			margin-top: 20px;
+		}
+		.zjz{
+			display: flex;
+			justify-content: flex-start;
+			align-items:center;
+		}
+		.jzs{
+		
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+		.tscolor{
+			color:deeppink; 
+			font-weight:bold;
+		}
+		.tscolor1{
+				color: #808080;
+		}
+		.jmjd{
+			border-top: 1px solid #000000;
+			border-bottom: 1px solid #000000;
+		}
+		.pdsx{
+			padding-top:10px;
+			padding-bottom:10px;
+		}
+		.zy20{
+			padding-left:20px;
+			padding-right:20px;
+			
+		}
+		.wbpd{
+			padding-left:5%;
+			padding-right:5%;
+		}
+		.sx20{
+				margin-top: 20px;
+				margin-bottom: 20px;
+		}
+		.bje{
+			background-color: #EEEEEE;
+		}
+		.bje2{
+			background-color: #e2e2e2;
+		}
+		.bjd{
+			background-color: #DDDDDD;
+		}
+		.bjd2{
+			background-color: #d2d2d2;
+		}
+	
+.cp_xg{
+	
+	box-shadow: 1px 1px 3px 1px #DDDDDD;
+}
+.cp_xg:hover{
+	
+	box-shadow: 1px 1px 5px 1px #DDDDDD;
+}
+		
+		
+.wzly{
+	width: 100%;
+	height:48px;
+	border: 1px solid #DDDDDD;
+	border-radius: 4px;
+}
+.wzlist{
+	display: flex; justify-content: space-between; width: 100%;
+}
+.fl_h{
+	display: flex;
+	align-items: center;
+}
+.wz_nr{
+	border: 1px solid #D2D2D2;
+	border-radius:8px;
+}
+
+.gywm{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-wrap:wrap;
+	align-items: center;
+	
+}
+.gywm_icon{
+	width:120px; 
+	height:120px;
+/* 	border:1px solid #000000; */
+}

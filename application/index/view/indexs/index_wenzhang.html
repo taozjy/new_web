@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="text/css/layui.css">
+		<link rel="stylesheet" href="text/qt.css">
+		<script src="text/layui.js"></script>
+		<script src="text/jquery.js"></script>
+		
+	</head>
+	<body>
+		{include file='application/index/view/head.html'}
+		
+		<div class="layui-row">&nbsp;</div>
+		
+		<div class="layui-container" >
+			<div class="layui-row">
+				<div class="layui-col-md12" >
+					{volist name='xinxi' id='wz' }
+					<div class="layui-col-md12 jz" >
+						<h1>{$wz.index_text_name}</h1>
+					</div>
+					<div class="layui-col-md12">&nbsp;</div>
+					<div class="layui-col-md12 j_right" >
+						<h3>文章发布时间:{$wz.index_text_time}</h3>
+					</div>
+					
+					<div class="layui-col-md12">&nbsp;</div>
+					
+					<div  class="layui-col-md12 neirong" >
+						{$wz.index_text_text}
+					</div>
+					{/volist}
+				</div>
+			</div>
+		</div>
+		{include file='application/index/view/foot.html'}
+		
+		<script type="text/javascript">
+						
+						
+						$.ajax({
+										type:"get",
+										// headers:{'Content-Type':'application/json;charset=utf8'},
+										url:"index.php?s=index/index/bottom",
+										success:function(text){
+											let texts = JSON.parse(text);
+											$("#qq").html("QQ:"+texts[0].qq_text);
+											$("#codes").attr("src",texts[0].qr_code_url);
+											$("#numbers").html("网站备案编号:"+texts[0].number);
+											$("#address").html("地址:"+texts[0].address);
+										}
+						})
+							
+		</script>
+	</body>
+</html>

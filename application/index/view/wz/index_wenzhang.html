@@ -1,0 +1,33 @@
+{extend name='mb'}
+{block name='bodys'}
+		
+		
+		<div class="layui-row">&nbsp;</div>
+		
+		<div class="layui-container wz_nr" >
+			<div class="layui-row">
+				<div class="layui-col-md12" >
+					<div>&nbsp;</div>
+					{volist name='xinxi' id='wz' }
+					<div class="layui-col-md12 jz" >
+						<h1>{$wz.index_text_name}</h1>
+					</div>
+					<div class="layui-col-md12">&nbsp;</div>
+					<div class="layui-col-md12 j_right" >
+						<h3>文章发布时间:{$wz.index_text_time}</h3>
+					</div>
+					
+					<div class="layui-col-md12">&nbsp;</div>
+					
+					<div  class="layui-col-md12 neirong" >
+						{$wz.index_text_text}
+					</div>
+					{/volist}
+				</div>
+			</div>
+		</div>
+		
+
+{/block}
+	</body>
+</html>

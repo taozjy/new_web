@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="text/css/layui.css">
+		<link rel="stylesheet" href="text/zd.css">
+		<script src="text/layui.js"></script>
+		<script src="text/jquery.js"></script>
+	</head>
+	<body>
+		{include file='admin/admin/view/head.html'}
+		<!-- <div class="layui-container"> -->
+			<div class="layui-row">
+					<div class="layui-col-md12">
+							{include file='admin/admin/view/left.html'}
+							
+							<div style="padding: 10px; box-sizing: border-box;" class="layui-col-md10">
+								<a class="layui-col-md1 layui-btn" href="admin.php?s=admin/banner/banner_add_false">新增</a>
+								<div class="layui-col-md12">&nbsp</div>
+								<ul style="background-color: whitesmoke;" class="layui-col-md12">
+								<li class="layui-col-md1 biaoti">排序</li>
+								<li class="layui-col-md4 biaoti">路径</li>
+								<li class="layui-col-md2 biaoti">链接</li>
+								<li class="layui-col-md1 biaoti">是否</li>
+								<li class="layui-col-md2 biaoti">操作</li>
+								</ul>
+								<div class="layui-col-md12">&nbsp</div>
+								{volist name="banner_sel" id="banner_sel" }
+									<ul class="layui-col-md12 jz1">
+										<li class="layui-col-md1 ">{$banner_sel.id}</li>
+										<li class="layui-col-md4 ">{$banner_sel.url}</li>
+										<li class="layui-col-md2 ">{$banner_sel.hrefs}</li>
+										<li class="layui-col-md1">{$banner_sel.math}</li>
+										<li class="layui-col-md2"><a class="layui-btn" href="admin.php?s=admin/banner/banner_sc&id={$banner_sel.id}">删除</a></li>
+									</ul>
+								<div class="layui-col-md12">&nbsp</div>	
+								{/volist}
+							</div>
+					</div>
+			</div>
+	</body>
+</html>

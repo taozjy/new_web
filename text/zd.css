@@ -1,0 +1,58 @@
+*{
+	box-sizing: border-box;
+	font-family: "microsoft yahei";
+}
+.hg28{
+					height:28px;
+					display:flex;
+					justify-content: center;
+					align-items: center;
+				}
+				
+.d_border{
+	border-bottom: 1px solid #000000;
+}
+
+
+.pd{
+				padding: 10px; box-sizing: border-box;
+			}
+			.biaoti{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 2px;
+				box-sizing: border-box;
+			}
+			.jz1 li{
+				height:80px;
+				font-size: 24px;
+				background-color:#f1f1f1 ;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			.zt{
+				font-size: 1rem;
+			}
+			.zt2{
+				font-size: 2rem;
+			}
+			
+			.pd15{
+				padding: 15px;
+				box-sizing: border-box;
+			}
+			.teshu{
+			/* 	position: fixed; */
+				margin-top: 15%;
+				
+			}
+			.ty{
+				box-shadow: 0px 0px 3px 0px powderblue;
+			}
+			.about_input{
+				border-radius: 8px;
+				border: 1px solid #D2D2D2;
+			}

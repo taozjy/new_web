@@ -3,8 +3,12 @@ namespace app\index\controller;
 use think\Db;
 use think\Controller;
 use app\index\model\Xm;
-class Index extends Gg
+class Index extends Controller
 {
+	public function cs(){
+		echo "cs";
+		exit();
+	}
 	
     public function index()
     {
